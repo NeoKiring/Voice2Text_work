@@ -433,3 +433,24 @@ run.bat
 | **Codex** | バックエンド（`src/core/`, `src/audio/`, `src/transcription/`, `src/export/`, `src/session/`） |
 | **Claude Code** | フロントエンド（`src/gui/`）、ドキュメント（`docs/`）、起動スクリプト |
 | **Codex** | コードレビュー・静的解析（全ファイル対象） |
+
+---
+
+## 9. 実装済みコア機能（このリポジトリ）
+
+- `ConfigManager` に設定バージョニングとマイグレーション（v1 -> v2）を実装。
+- `SessionController` に開始/停止、イベント通知、セグメント処理を実装。
+- `ExportService` で txt/json/srt 保存を実装。
+- `CustomTkinter` GUI（開始/停止・リアルタイム表示）を実装。
+- `run_voice2text.bat` でワンクリック起動を実装。
+
+---
+
+
+## 10. 現在の実装ステータス（重要）
+
+- 現在のコードは**コア機能検証用のプロトタイプ**です。
+- `AudioCapture` は WASAPI Loopback の抽象レイヤーで、現状はダミー入力実装です。
+- `VADSegmenter` は現状、簡易エネルギー閾値方式であり Silero VAD は未統合です。
+- `TranscriptionEngine` は置換点を持つダミー実装で、faster-whisper 本実装は次フェーズで統合します。
+
