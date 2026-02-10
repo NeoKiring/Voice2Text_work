@@ -420,3 +420,16 @@ run.bat
 | NumPy | BSD | 可 |
 | PyYAML | MIT | 可 |
 | structlog | MIT / Apache 2.0 | 可 |
+
+---
+
+## 9. 開発分担ガイド
+
+本プロジェクトは **Claude Code** と **Codex** の2ツールで分担開発を行います。
+詳細は [開発分担ガイド](docs/development_guide.md) を参照してください。
+
+| 担当 | 対象領域 |
+|------|---------|
+| **Codex** | バックエンド（`src/core/`, `src/audio/`, `src/transcription/`, `src/export/`, `src/session/`） |
+| **Claude Code** | フロントエンド（`src/gui/`）、ドキュメント（`docs/`）、起動スクリプト |
+| **Codex** | コードレビュー・静的解析（全ファイル対象） |
